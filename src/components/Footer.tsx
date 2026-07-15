@@ -1,4 +1,4 @@
-import { Globe, Instagram, Mail, ChevronRight } from 'lucide-react';
+import { Globe, Instagram, Mail, MapPin, Phone, ChevronRight } from 'lucide-react';
 import { ActivePage } from '../types';
 
 interface FooterProps {
@@ -20,14 +20,28 @@ export default function Footer({ setActivePage }: FooterProps) {
           {/* Brand/About Column */}
           <div className="md:col-span-2 space-y-4">
             <h3 className="font-serif text-xl font-bold tracking-widest text-brand-cream">
-              OAT <span className="text-brand-accent">&</span> BEAN
+              CHIKMAGALUR <span className="text-brand-accent">COFFEE</span> CAFE
             </h3>
             <p className="font-mono text-[9px] tracking-[0.25em] text-brand-accent uppercase -mt-2">
-              Chikmagalur Coffee Cafe
+              Founded by Divya Gopinath
             </p>
             <p className="max-w-md text-sm leading-relaxed text-brand-cream/60 pt-2">
               Ethically sourced, artisanal coffee grown in the heart of Karnataka. We maintain a sacred farm-to-cup commitment to quality, biodiversity, and the centuries-old ritual of heritage brewing in the Western Ghats.
             </p>
+            <div className="space-y-2 pt-2 text-xs text-brand-cream/60">
+              <p className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-brand-accent flex-shrink-0 mt-0.5" />
+                <span>B42, 4th/5th Floor, Road No. 3, Above Vision Express, MLA Colony, Jubilee Hills, Hyderabad, Telangana – 500033</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-brand-accent flex-shrink-0" />
+                <span>+91 91003 65391 &middot; +91 62814 60353</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-brand-accent flex-shrink-0" />
+                <span>support@chikmagalurcoffeecafe.com</span>
+              </p>
+            </div>
             <div className="flex space-x-4 pt-4">
               <a
                 id="social-globe"

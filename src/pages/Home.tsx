@@ -142,7 +142,7 @@ export default function Home({ setActivePage }: HomeProps) {
                   Uncompromising Quality
                 </h3>
                 <p className="text-xs sm:text-sm text-brand-sand/80 leading-relaxed font-light">
-                  Every batch is meticulously evaluated. Only the top 1% of beans earn the Oat & Bean seal, ensuring an unparalleled experience in every single sip.
+                  Every batch is meticulously evaluated. Only the top 1% of beans earn the Chikmagalur Coffee Cafe seal, ensuring an unparalleled experience in every single sip.
                 </p>
               </div>
               <div className="pt-4 border-t border-brand-sand/10 flex justify-between items-center text-[10px] tracking-wider uppercase font-semibold text-brand-sand/60">

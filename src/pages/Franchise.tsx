@@ -101,7 +101,7 @@ export default function Franchise() {
             Grow with the Heritage <br /> of Chikmagalur
           </h1>
           <p className="text-sm sm:text-base text-brand-cream/85 max-w-2xl mx-auto font-light leading-relaxed">
-            Become a cornerstone of your city's coffee renaissance. Oat &amp; Bean offers a proven, highly profitable business model backed by generational heritage, direct sourcing, and architectural design.
+            Become a cornerstone of your city's coffee renaissance. Chikmagalur Coffee Cafe offers a proven, highly profitable business model backed by generational heritage, direct sourcing, and architectural design.
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -265,7 +265,7 @@ export default function Franchise() {
             <div className="p-6 bg-brand-cream/50 rounded-lg border border-brand-cream relative space-y-4">
               <Quote className="absolute top-4 right-6 w-10 h-10 text-brand-dark/5" />
               <p className="font-serif italic text-sm text-brand-dark/80 leading-relaxed">
-                "Partnering with Oat &amp; Bean was the most rewarding venture of my professional life. The corporate design support, intensive CCC training academy, and direct estate bean quality made our Indiranagar flagship café a sensational success from week one."
+                "Partnering with Chikmagalur Coffee Cafe was the most rewarding venture of my professional life. The corporate design support, intensive CCC training academy, and direct estate bean quality made our Indiranagar flagship café a sensational success from week one."
               </p>
               <div className="flex items-center gap-3 pt-2">
                 <div className="w-10 h-10 rounded-full bg-[#9E653F] text-brand-sand flex items-center justify-center font-mono text-xs font-bold">
@@ -379,7 +379,7 @@ export default function Franchise() {
                     rows={4}
                     value={formData.message}
                     onChange={handleFormChange}
-                    placeholder="Describe your hospitality background, location access, and why you wish to introduce Oat &amp; Bean."
+                    placeholder="Describe your hospitality background, location access, and why you wish to introduce Chikmagalur Coffee Cafe."
                     className="w-full bg-brand-sand border border-brand-dark/15 rounded-sm p-3 text-xs text-brand-dark focus:outline-none focus:border-brand-accent resize-none"
                   ></textarea>
                 </div>

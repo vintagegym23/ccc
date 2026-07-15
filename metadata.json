@@ -1,6 +1,5 @@
 {
-  "name": "Oat & Bean",
-  "description": "An elegant, premium, and fully responsive coffee website showcasing the heritage, curated collections, franchise opportunities, and sanctuary locations of Chikmagalur Coffee.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "name": "Chikmagalur Coffee Cafe",
+  "description": "An elegant, premium, and fully responsive coffee website showcasing the heritage, curated collections, franchise opportunities, and sanctuary locations of Chikmagalur Coffee Cafe.",
+  "requestFramePermissions": []
 }

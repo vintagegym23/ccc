@@ -184,7 +184,7 @@ export const reviews: Review[] = [
     id: 'r3',
     name: 'Elena Kostic',
     role: 'Sustainability Advocate',
-    content: 'The absolute commitment to direct, ethical trade and shade-grown farming is what brought me to Oat & Bean, but the incredible quality and deep flavor profile of the roast is what keeps me coming back every single week.',
+    content: 'The absolute commitment to direct, ethical trade and shade-grown farming is what brought me to Chikmagalur Coffee Cafe, but the incredible quality and deep flavor profile of the roast is what keeps me coming back every single week.',
     rating: 5,
     initials: 'EK'
   }

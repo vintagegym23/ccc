@@ -85,14 +85,20 @@ export default function ContactUs() {
               {/* Corporate HQ */}
               <div className="space-y-2">
                 <span className="font-mono text-[9px] tracking-widest text-[#9E653F] font-bold uppercase block">CORPORATE HEADQUARTERS</span>
-                <h3 className="font-serif text-lg font-bold text-brand-dark">Oat &amp; Bean Coffee Ltd.</h3>
+                <h3 className="font-serif text-lg font-bold text-brand-dark">Chikmagalur Coffee Cafe (CCC)</h3>
                 <p className="text-sm text-brand-dark/75 leading-relaxed font-light">
-                  Heritage Mansion, 4th Floor, Lavelle Road, Bangalore, KA – 560001
+                  B42, 4th/5th Floor, Road No. 3, Above Vision Express, MLA Colony, Jubilee Hills, Hyderabad, Telangana – 500033
                 </p>
-                <p className="text-xs text-brand-dark/55 flex items-center gap-1.5 font-semibold pt-1">
-                  <Phone className="w-3.5 h-3.5 text-brand-accent" />
-                  +91 (80) 4209 1102
-                </p>
+                <div className="flex flex-col gap-1 pt-1">
+                  <p className="text-xs text-brand-dark/55 flex items-center gap-1.5 font-semibold">
+                    <Phone className="w-3.5 h-3.5 text-brand-accent" />
+                    +91 91003 65391
+                  </p>
+                  <p className="text-xs text-brand-dark/55 flex items-center gap-1.5 font-semibold">
+                    <Phone className="w-3.5 h-3.5 text-brand-accent" />
+                    +91 62814 60353
+                  </p>
+                </div>
               </div>
 
               {/* Emails block */}
@@ -101,22 +107,22 @@ export default function ContactUs() {
                   <span className="font-mono text-[9px] tracking-widest text-brand-dark/40 block font-bold">GENERAL INQUIRIES</span>
                   <a
                     id="email-general"
-                    href="mailto:hello@oatandbean.com"
+                    href="mailto:support@chikmagalurcoffeecafe.com"
                     className="font-serif text-sm font-bold text-brand-accent hover:text-brand-dark transition-colors flex items-center gap-1.5"
                   >
                     <Mail className="w-3.5 h-3.5" />
-                    hello@oatandbean.com
+                    support@chikmagalurcoffeecafe.com
                   </a>
                 </div>
                 <div className="space-y-1">
                   <span className="font-mono text-[9px] tracking-widest text-brand-dark/40 block font-bold">FRANCHISE SUPPORT</span>
                   <a
                     id="email-franchise"
-                    href="mailto:expansion@oatandbean.com"
+                    href="mailto:enquiry@chikmagalurcoffeecafe.com"
                     className="font-serif text-sm font-bold text-brand-accent hover:text-brand-dark transition-colors flex items-center gap-1.5"
                   >
                     <Mail className="w-3.5 h-3.5" />
-                    expansion@oatandbean.com
+                    enquiry@chikmagalurcoffeecafe.com
                   </a>
                 </div>
               </div>
@@ -163,7 +169,7 @@ export default function ContactUs() {
                 </div>
                 <h4 className="font-serif text-xl font-bold">Message Delivered Successfully</h4>
                 <p className="text-xs text-brand-sand/75 leading-relaxed max-w-sm mx-auto font-light">
-                  Thank you for corresponding with Oat &amp; Bean. Your dispatch has been successfully routed to our customer experience team.
+                  Thank you for corresponding with Chikmagalur Coffee Cafe. Your dispatch has been successfully routed to our customer experience team.
                 </p>
               </div>
             ) : (
@@ -251,7 +257,7 @@ export default function ContactUs() {
           <div className="max-w-xl mx-auto space-y-2">
             <span className="font-mono text-[9px] tracking-widest text-brand-accent uppercase font-bold">SPATIAL INDEX</span>
             <h3 className="font-serif text-2xl font-bold text-brand-dark">Our Headquarters Siting</h3>
-            <p className="text-xs text-brand-dark/60 font-light">Directing coordinate vectors between Lavelle Road corporate HQ and our Chikmagalur canopy farms.</p>
+            <p className="text-xs text-brand-dark/60 font-light">Directing coordinate vectors between our Hyderabad corporate HQ and our Chikmagalur canopy farms.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 text-left">
@@ -259,8 +265,8 @@ export default function ContactUs() {
             <div className="p-6 bg-brand-sand rounded-lg border border-brand-cream flex items-start gap-4">
               <MapPin className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
               <div className="space-y-1.5">
-                <h4 className="font-serif font-bold text-brand-dark text-sm">Corporate Siting (Bangalore)</h4>
-                <p className="text-xs text-brand-dark/65 font-light">Lavelle Road, Richmond Town, Bangalore. Coordinates: 12.9716° N, 77.5946° E.</p>
+                <h4 className="font-serif font-bold text-brand-dark text-sm">Corporate Siting (Hyderabad)</h4>
+                <p className="text-xs text-brand-dark/65 font-light">Jubilee Hills, Hyderabad, Telangana. Coordinates: 17.4326° N, 78.4071° E.</p>
               </div>
             </div>
 

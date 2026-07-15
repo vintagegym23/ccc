@@ -6,7 +6,7 @@ const CHAPTER_DATA = [
   { heading: 'AUTHENTIC ROOTS', sub: 'Every bean tells a story.' },
   { heading: 'PRECISION', sub: 'Roasted to perfection.' },
   { heading: 'ELEVATING\nTHE SENSES', sub: 'Every sip matters.' },
-  { heading: 'OAT & BEAN', sub: 'Explore Our Story' },
+  { heading: 'CHIKMAGALUR\nCOFFEE CAFE', sub: 'Explore Our Story' },
 ] as const;
 
 interface HeroProps {
@@ -61,7 +61,7 @@ const Hero = ({ frames, isLoaded, onLeave, onEnterBack }: HeroProps) => {
               className="absolute bottom-20 left-10 md:left-20 opacity-0"
             >
               <p className="text-white/40 text-[10px] tracking-[0.4em] uppercase mb-4">
-                Chikmagalur Coffee Co.
+                Chikmagalur Coffee Cafe
               </p>
               <h1
                 className="text-white font-light leading-none mb-4"

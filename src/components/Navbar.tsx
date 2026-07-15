@@ -53,7 +53,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
             onClick={() => handleNavClick('home')}
             className="flex items-center focus:outline-none group cursor-pointer"
           >
-            <img src="/logo.svg" alt="Oat & Bean, Chikmagalur Coffee Co." className="h-24 sm:h-28 w-auto" />
+            <img src="/logo.svg" alt="Chikmagalur Coffee Cafe" className="h-24 sm:h-28 w-auto" />
           </button>
 
           {/* Desktop Nav Items */}
