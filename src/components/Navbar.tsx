@@ -51,14 +51,9 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
           <button
             id="brand-logo"
             onClick={() => handleNavClick('home')}
-            className="flex flex-col items-start focus:outline-none group cursor-pointer text-left"
+            className="flex items-center focus:outline-none group cursor-pointer"
           >
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-widest text-brand-dark flex items-center gap-2">
-              OAT <span className="text-brand-accent">&</span> BEAN
-            </span>
-            <span className="font-mono text-[9px] tracking-[0.25em] text-brand-accent/80 font-medium uppercase mt-0.5">
-              Chikmagalur Coffee Co.
-            </span>
+            <img src="/logo.svg" alt="Oat & Bean, Chikmagalur Coffee Co." className="h-24 sm:h-28 w-auto" />
           </button>
 
           {/* Desktop Nav Items */}
