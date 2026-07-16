@@ -24,20 +24,20 @@ const Loader = ({ progress, isLoaded, onComplete }: LoaderProps) => {
   return (
     <div
       ref={rootRef}
-      className="fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center select-none"
+      className="fixed inset-0 z-[100] bg-brand-sand flex flex-col items-center justify-center select-none"
     >
-      <p className="text-white/30 text-[10px] tracking-[0.45em] uppercase mb-14">
+      <p className="text-brand-accent/80 text-[10px] tracking-[0.45em] uppercase mb-14">
         Chikmagalur Coffee Cafe
       </p>
 
-      <div className="relative w-52 h-px bg-white/10 overflow-hidden">
+      <div className="relative w-52 h-px bg-brand-dark/10 overflow-hidden">
         <div
-          className="absolute inset-y-0 left-0 bg-white/80 transition-[width] duration-300 ease-out"
+          className="absolute inset-y-0 left-0 bg-brand-accent transition-[width] duration-300 ease-out"
           style={{ width: `${progress}%` }}
         />
       </div>
 
-      <p className="text-white/20 text-[10px] mt-5 tabular-nums tracking-widest">
+      <p className="text-brand-dark/40 text-[10px] mt-5 tabular-nums tracking-widest">
         {String(progress).padStart(3, '0')}
       </p>
     </div>

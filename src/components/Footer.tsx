@@ -14,8 +14,21 @@ export default function Footer({ setActivePage }: FooterProps) {
   };
 
   return (
-    <footer id="main-footer" className="bg-[#1C0D02] text-brand-cream/80 border-t border-brand-dark/25 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <footer id="main-footer" className="relative overflow-hidden bg-[#1C0D02] text-brand-cream/80 border-t border-brand-dark/25 py-16 px-4 sm:px-6 lg:px-8">
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/footer_video.m4v"
+        autoPlay
+        loop
+        muted
+        playsInline
+        aria-hidden="true"
+      />
+      {/* Darkening overlay for text legibility */}
+      <div className="absolute inset-0 bg-[#1C0D02]/70" />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 pb-12 border-b border-brand-cream/10">
           {/* Brand/About Column */}
           <div className="md:col-span-2 space-y-4">

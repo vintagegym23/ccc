@@ -42,7 +42,7 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b ${
         scrolled
           ? 'bg-brand-sand/90 backdrop-blur-md py-4 shadow-sm border-brand-cream/60'
-          : 'bg-brand-sand/50 backdrop-blur-sm py-5 border-transparent'
+          : 'bg-brand-sand/10 backdrop-blur-sm py-5 border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

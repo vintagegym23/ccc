@@ -35,20 +35,11 @@ const Hero = ({ frames, isLoaded, onLeave, onEnterBack }: HeroProps) => {
 
   return (
     // Scroll-length container: defines total scroll distance (normal document flow, not pinned itself)
-    <div ref={wrapperRef} className="relative w-full" style={{ height: '400vh' }}>
+    <div id="hero-wrapper" ref={wrapperRef} className="relative w-full" style={{ height: '400vh' }}>
       {/* Pinned stage: the actual viewport-height visual layer GSAP pins in place */}
       <div ref={stageRef} className="relative w-full h-screen overflow-hidden">
         {/* Canvas — sized via useImageSequence */}
         <canvas ref={canvasRef} className="absolute top-0 left-0 block" />
-
-        {/* Dark gradient at bottom for text legibility */}
-        <div
-          className="absolute top-0 left-0 w-full h-full pointer-events-none"
-          style={{
-            background:
-              'linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 50%)',
-          }}
-        />
 
         {/* Chapter text overlay */}
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
@@ -71,7 +62,21 @@ const Hero = ({ frames, isLoaded, onLeave, onEnterBack }: HeroProps) => {
                   whiteSpace: 'pre-line',
                 }}
               >
-                {ch.heading}
+                {i === CHAPTER_DATA.length - 1 ? (
+                  <>
+                    {'CHIKMAGALUR\n'}
+                    COFFEE CAFE{' '}
+                    <img
+                      id="hero-cup-source"
+                      src="/cup.png"
+                      alt=""
+                      aria-hidden="true"
+                      className="inline-block align-middle h-[0.8em] w-auto ml-2 -translate-y-1"
+                    />
+                  </>
+                ) : (
+                  ch.heading
+                )}
               </h1>
               <p className="text-white/50 text-sm md:text-base font-light tracking-widest">
                 {ch.sub}
