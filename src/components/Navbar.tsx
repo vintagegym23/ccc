@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Coffee } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ActivePage } from '../types';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface NavbarProps {
   activePage: ActivePage;
@@ -13,12 +17,39 @@ export default function Navbar({ activePage, setActivePage }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const legacyEl = activePage === 'home' ? document.getElementById('legacy-section') : null;
+
+    if (!legacyEl) {
+      // Not Home (or Heritage isn't in the DOM here) — original simple
+      // scroll-threshold behavior, unchanged.
+      const handleScroll = () => setScrolled(window.scrollY > 20);
+      handleScroll();
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+
+    // Home: the Hero is a full-bleed pinned scene (400vh of scroll, ~270
+    // frames) — the nav must stay transparent through the *entire* pin, not
+    // just the first 20px of scroll, only switching once Our Heritage has
+    // scrolled about halfway into view (its top edge crosses the viewport's
+    // vertical center). Driven by a real ScrollTrigger rather than a plain
+    // `scroll` listener computing getBoundingClientRect() by hand: a raw
+    // listener races against ScrollTrigger's own RAF-driven update/pin-
+    // spacing cycle and can read a stale (pre-pin-adjustment) position,
+    // which is what made this fire almost immediately on scroll instead of
+    // only after the Hero's pin actually released. ScrollTrigger's own
+    // `start` calculation already accounts for Hero's pin-spacing, so this
+    // can't fire early.
+    setScrolled(false);
+    const st = ScrollTrigger.create({
+      trigger: legacyEl,
+      start: 'top center',
+      onEnter: () => setScrolled(true),
+      onLeaveBack: () => setScrolled(false),
+    });
+
+    return () => st.kill();
+  }, [activePage]);
 
   const navItems = [
     { id: 'home', label: 'HOME' },

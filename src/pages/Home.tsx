@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 // Liquid wipe temporarily disabled — component kept for later reuse, just not placed here for now.
 // import LiquidWipeTransition from '../components/LiquidWipeTransition';
 import ColorFlowOverlay from '../components/ColorFlowOverlay';
+import FranchiseHighlight from '../components/FranchiseHighlight';
 import usePreloader from '../hooks/usePreloader';
 import useLenis from '../hooks/useLenis';
 
@@ -77,7 +78,7 @@ export default function Home({ setActivePage }: HomeProps) {
       <HeroCupTravel />
 
       {/* 2. LEGACY STEEPED IN LEGEND */}
-      <section id="legacy-section" className="relative pt-24 pb-10 md:py-24 bg-brand-sand px-4 sm:px-6 lg:px-8">
+      <section id="legacy-section" className="relative z-10 pt-24 pb-10 md:py-24 bg-brand-sand px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-16 items-center">
             {/* Left side: Storytelling Text */}
@@ -93,8 +94,39 @@ export default function Home({ setActivePage }: HomeProps) {
               </span>
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-brand-dark leading-tight">
                 A Legacy Steeped <br /> in Legend
+                {/* Color-flow source: these 3 diamonds are where the color
+                    journey begins (see ColorFlowOverlay) — colored by
+                    default, each drains into its matching franchise
+                    mini-card on scroll toward that section, which then
+                    drains into its matching Our Values card, which then
+                    drains into its matching Elevating the Senses circle.
+                    One continuous chain. Inline right after "Legend" (same
+                    pattern as the hero's inline cup after "COFFEE CAFE"),
+                    not a separate row below the heading. */}
+                <span className="inline-flex items-center gap-2 align-middle ml-3" aria-hidden="true">
+                  <span
+                    id="heritage-diamond-locations"
+                    className="relative inline-block w-4 h-4 rotate-45 overflow-hidden border border-[#5C3A21]/30"
+                  >
+                    <span className="color-drain-layer absolute inset-0 block" style={{ backgroundColor: '#5C3A21' }} />
+                  </span>
+                  <span
+                    id="heritage-diamond-direct-trade"
+                    className="relative inline-block w-4 h-4 rotate-45 overflow-hidden border border-brand-dark/20"
+                  >
+                    <span className="color-drain-layer absolute inset-0 block" style={{ backgroundColor: '#EFECE6' }} />
+                  </span>
+                  <span
+                    id="heritage-diamond-profit-margin"
+                    className="relative inline-block w-4 h-4 rotate-45 overflow-hidden border border-[#8E9F88]/40"
+                  >
+                    <span className="color-drain-layer absolute inset-0 block" style={{ backgroundColor: '#8E9F88' }} />
+                  </span>
+                </span>
               </h2>
+
               <div className="w-16 h-[2px] bg-brand-accent my-4"></div>
+
               <p className="text-sm sm:text-base text-brand-dark/80 leading-relaxed font-light">
                 Our journey began generations ago, in the hidden valleys where the air is thin and the coffee cherries ripen slowly. Each bean tells a story of patience, of families dedicated to the craft of cultivation, and a relentless pursuit of the perfect roast.
               </p>
@@ -165,6 +197,9 @@ export default function Home({ setActivePage }: HomeProps) {
       {/* <LiquidWipeTransition /> */}
       <ColorFlowOverlay />
 
+      {/* 2.5 FRANCHISE HIGHLIGHT */}
+      <FranchiseHighlight onNavigate={handleCTA} />
+
       {/* 3. OUR VALUES (OUR ETERNAL COMMITMENT) */}
       <section id="values-section" className="py-10 md:py-24 bg-brand-cream/45 px-4 sm:px-6 lg:px-8">
         <div className="relative z-10 max-w-7xl mx-auto">
@@ -201,15 +236,15 @@ export default function Home({ setActivePage }: HomeProps) {
                 <div className="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center text-brand-accent group-hover:scale-105 transition-transform duration-300">
                   <Award className="w-6 h-6" />
                 </div>
-                <h3 className="drain-text font-serif text-xl font-bold tracking-wide" style={{ color: '#FAF6F0' }}>
+                <h3 className="drain-text font-serif text-xl font-bold tracking-wide" style={{ color: '#2A1A0F' }}>
                   Uncompromising Quality
                 </h3>
-                <p className="drain-text text-xs sm:text-sm leading-relaxed font-light" style={{ color: '#FAF6F0' }}>
+                <p className="drain-text text-xs sm:text-sm leading-relaxed font-light" style={{ color: '#2A1A0F' }}>
                   Every batch is meticulously evaluated. Only the top 1% of beans earn the Chikmagalur Coffee Cafe seal, ensuring an unparalleled experience in every single sip.
                 </p>
               </div>
               <div className="relative z-10 pt-4 border-t border-brand-dark/10 flex justify-between items-center text-[10px] tracking-wider uppercase font-semibold">
-                <span className="drain-text" style={{ color: '#FAF6F0' }}>ESTATE GRADING</span>
+                <span className="drain-text" style={{ color: '#2A1A0F' }}>ESTATE GRADING</span>
                 <CheckCircle2 className="w-4 h-4 text-brand-accent" />
               </div>
             </motion.div>
