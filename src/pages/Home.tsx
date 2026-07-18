@@ -11,6 +11,7 @@ import Loader from '../components/Loader';
 import ColorFlowOverlay from '../components/ColorFlowOverlay';
 import FranchiseHighlight from '../components/FranchiseHighlight';
 import HeritageFrameSequence from '../components/HeritageFrameSequence';
+import OurFranchises from '../components/OurFranchises';
 import usePreloader from '../hooks/usePreloader';
 import useLenis from '../hooks/useLenis';
 
@@ -433,6 +434,9 @@ export default function Home({ setActivePage }: HomeProps) {
           </div>
         </div>
       </section>
+
+      {/* 4.5 OUR FRANCHISES */}
+      <OurFranchises onNavigate={handleCTA} />
 
       {/* 5. BE PART OF OUR JOURNEY (CTA) */}
       <section
