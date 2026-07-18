@@ -65,14 +65,7 @@ const Hero = ({ frames, isLoaded, onLeave, onEnterBack }: HeroProps) => {
                 {i === CHAPTER_DATA.length - 1 ? (
                   <>
                     {'CHIKMAGALUR\n'}
-                    COFFEE CAFE{' '}
-                    <img
-                      id="hero-cup-source"
-                      src="/cup.png"
-                      alt=""
-                      aria-hidden="true"
-                      className="inline-block align-middle h-[0.8em] w-auto ml-2 -translate-y-1"
-                    />
+                    COFFEE CAFE
                   </>
                 ) : (
                   ch.heading

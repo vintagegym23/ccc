@@ -3,12 +3,14 @@ import { motion } from 'motion/react';
 import { Award, Leaf, Users, CheckCircle2, ChevronRight, Sparkles, Droplet, Coffee } from 'lucide-react';
 import { ActivePage } from '../types';
 import Hero from '../components/Hero';
-import HeroCupTravel from '../components/HeroCupTravel';
+// Cup travel animation temporarily disabled — component kept for later reuse.
+// import HeroCupTravel from '../components/HeroCupTravel';
 import Loader from '../components/Loader';
 // Liquid wipe temporarily disabled — component kept for later reuse, just not placed here for now.
 // import LiquidWipeTransition from '../components/LiquidWipeTransition';
 import ColorFlowOverlay from '../components/ColorFlowOverlay';
 import FranchiseHighlight from '../components/FranchiseHighlight';
+import HeritageFrameSequence from '../components/HeritageFrameSequence';
 import usePreloader from '../hooks/usePreloader';
 import useLenis from '../hooks/useLenis';
 
@@ -75,7 +77,7 @@ export default function Home({ setActivePage }: HomeProps) {
         />
       )}
       <Hero frames={frames} isLoaded={isLoaded} />
-      <HeroCupTravel />
+      {/* <HeroCupTravel /> */}
 
       {/* 2. LEGACY STEEPED IN LEGEND */}
       <section id="legacy-section" className="relative z-10 pt-24 pb-10 md:py-24 bg-brand-sand px-4 sm:px-6 lg:px-8">
@@ -145,46 +147,29 @@ export default function Home({ setActivePage }: HomeProps) {
               </div>
             </motion.div>
 
-            {/* Right side: reserved for a future animation — placeholder keeps
-                the grid column's shape/height until that's wired in. */}
+            {/* Right side: scroll-scrubbed coffee_frames sequence (see
+                HeritageFrameSequence) — this div's aspect ratio governs the
+                canvas's rendered size at each breakpoint. */}
             <div
               id="legacy-visual-slot"
               className="relative lg:col-span-5 lg:order-2 aspect-[2/1] sm:aspect-[16/11] lg:aspect-[1.2]"
-            />
+            >
+              <HeritageFrameSequence />
+            </div>
           </div>
         </div>
 
-        {/* Straddles the boundary with Our Values below on desktop (md:) —
-            unchanged from before: shifted down by ~32% of its own height, so
-            roughly 68% sits in this section and 32% in Our Values. Below md,
-            the grid stacks (text, then the visual-slot placeholder) so the
-            same bottom-anchored position would land far past the cup's own
-            mobile spot — instead it's centered around where the cup lands,
-            sized to fit the viewport width without overflowing. Absolutely
-            positioned and z-0 so it's a background decoration; both
-            sections' content wrappers are z-10, painting above it. */}
+        {/* Mid-section splash photo — temporarily disabled.
         <img
           src="/section mid.png"
           alt=""
           aria-hidden="true"
           className="block absolute right-0 top-[86%] -translate-y-1/2 w-[92vw] md:top-auto md:bottom-0 md:translate-y-[32%] md:w-[70vw] h-auto object-contain z-0 pointer-events-none select-none drop-shadow-xl"
         />
+        */}
 
-        {/* Resting spot for the traveling Hero cup (see HeroCupTravel): a
-            normal absolutely-positioned child of this section. Starts
-            invisible — HeroCupTravel fades it in as the traveling cup fades
-            out on arrival. Being a real child of this section (not
-            fixed/global) means it scrolls away naturally with Heritage and
-            can never drift into Our Values.
-            On desktop (md:) the grid runs text/visual side by side, so 60%
-            down the *whole* section lands in the visual column, as before.
-            Below md the grid stacks (text block, then the visual-slot
-            placeholder), so 60% would land inside the text — instead it's
-            ~78% down to sit within the stacked placeholder area, sized/inset
-            to stay clear of the viewport edges. HeroCupTravel.tsx mirrors
-            these same breakpoint fractions for its live travel target, so
-            the two never drift out of sync (see the "shrink at landing" fix
-            history there). */}
+        {/* Resting spot for the traveling Hero cup — temporarily disabled
+            along with HeroCupTravel above.
         <img
           id="legacy-cup-target"
           src="/cup.png"
@@ -192,6 +177,7 @@ export default function Home({ setActivePage }: HomeProps) {
           aria-hidden="true"
           className="absolute top-[88%] right-[26%] md:top-[60%] md:right-[22%] -translate-y-1/2 translate-x-1/2 rotate-[-30deg] w-40 sm:w-56 md:w-72 lg:w-96 h-auto opacity-0 z-20 pointer-events-none select-none drop-shadow-xl"
         />
+        */}
       </section>
 
       {/* <LiquidWipeTransition /> */}
